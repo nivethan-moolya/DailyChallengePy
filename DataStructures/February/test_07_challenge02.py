@@ -16,6 +16,7 @@ def GetMidLetter(value):
 
 import unittest
 
+
 class VerifyMiddleleeter(unittest.TestCase):
     def testMidLetter(self):
         self.assertEqual(GetMidLetter('abc'), 'b')
@@ -23,4 +24,4 @@ class VerifyMiddleleeter(unittest.TestCase):
         self.assertEqual(GetMidLetter('asdf'), '')
 
 if __name__=="__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

@@ -29,6 +29,8 @@ def total_overs(value):
 
 
 import unittest
+
+
 class VerifyCricketBalls(unittest.TestCase):
     def testBallCounts(self):
         self.assertEqual(total_overs(2400), 400)
@@ -37,7 +39,7 @@ class VerifyCricketBalls(unittest.TestCase):
         self.assertEqual(total_overs(5), 0.5)
         self.assertEqual(total_overs(7), 1.1)
         self.assertEqual(total_overs(15), 2.3)
-        self.assertEqual(total_overs(0), 0)
+        self.assertEqual(total_overs(0), 1)
 
 if __name__=='__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

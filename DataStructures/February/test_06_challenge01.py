@@ -28,12 +28,13 @@ def makeBalancedCluster(shuffledParentheses):
         if closedParentheses==openParentheses:
             balancedParentheses.append(''.join(tempCluster))
             tempCluster.clear()
-    print(f'Balanced Cluster of parentheses: {balancedParentheses}')
+    #print(f'Balanced Cluster of parentheses: {balancedParentheses}')
     return balancedParentheses
 
 #makeBalancedCluster(input(f'Provide string of Parentheses to make balanced clusters:'))
 
 import unittest
+
 
 class VerifyBalancedClusters(unittest.TestCase):
     def testBalancedCluster(self):
@@ -45,4 +46,4 @@ class VerifyBalancedClusters(unittest.TestCase):
 
 
 if __name__=="__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

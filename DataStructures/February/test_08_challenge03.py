@@ -8,12 +8,13 @@ Define a function named double_letters that takes a single parameter. The parame
 
 def double_letters(value):
     k = [n for n in range(len(value)-1) if value[n] == value[n+1]]
-    print(k)
+    #print(k)
     return len(k)>0
 
 #print(double_letters('hheloo'))
 
 import unittest
+
 
 class VerifyDoubleLetters(unittest.TestCase):
     def testDoubleLetters(self):
@@ -24,4 +25,4 @@ class VerifyDoubleLetters(unittest.TestCase):
         self.assertNotEqual(double_letters('aa'), False)
 
 if __name__=='__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

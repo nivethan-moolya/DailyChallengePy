@@ -14,6 +14,7 @@ def only_ints(a,b):
 
 import unittest
 
+
 class VerifyBoolean(unittest.TestCase):
     def testOnlyInts(self):
         self.assertEqual(only_ints(2,5), True)
@@ -23,4 +24,4 @@ class VerifyBoolean(unittest.TestCase):
         self.assertNotEqual(only_ints(2,'5'), True)
         
 if __name__=='__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

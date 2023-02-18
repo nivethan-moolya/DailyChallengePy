@@ -15,13 +15,15 @@ def countWords(sentence):
             if iEach == jEach:
                 v += 1
         dict[iEach] = v
+    #print(dict)
     return dict
 
 import unittest
+
 
 class VerifyLettersCount(unittest.TestCase):
     def testCountLetters(self):
         self.assertEqual(countWords('How are you?'), {'How':1, 'are':1, 'you?':1})
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

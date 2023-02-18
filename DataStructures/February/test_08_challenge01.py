@@ -14,6 +14,7 @@ def random_number():
 
 import unittest
 
+
 class VerifyRandomDataType(unittest.TestCase):
     def testDataTypeRandom(self):
         self.assertEqual(type(random_number()), int)
@@ -22,4 +23,4 @@ class VerifyRandomDataType(unittest.TestCase):
 
 
 if __name__=='__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

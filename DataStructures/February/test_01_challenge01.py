@@ -15,11 +15,13 @@ def CountEachLetters(sentence):
             if iEach in jEach:
                 v += 1
         dict[iEach] = v
+    #print(dict)
     return dict
     
 #print(CountEachLetters(input()))
 
 import unittest
+
 
 class VerifyLettersCount(unittest.TestCase):
     def testCountLetters(self):
@@ -28,4 +30,5 @@ class VerifyLettersCount(unittest.TestCase):
         self.assertEqual(CountEachLetters('aabbbcccc'), {'a':2, 'b':3, 'c':4})
 
 if __name__ == "__main__":
-    unittest.main()
+    
+    unittest.main(verbosity=2)

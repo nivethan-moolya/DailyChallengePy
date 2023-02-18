@@ -12,17 +12,19 @@ def capital_indexes(value):
     for i in range(0,len(value)):
         if value[i].isupper():
             l.append(i)
+    #print(l)
     return l
 
 
 # #Short answer
 # def capital_indexes(value):
 #     l = [i for i in range(len(value)) if value[i].isupper()]
-#     print(l)
+#     #print(l)
 
 #print(capital_indexes(input(f'Provide the String: ')))
 
 import unittest
+
 
 class VerifyCapitalIndex(unittest.TestCase):
     def testCapitalIndex(self):
@@ -31,4 +33,4 @@ class VerifyCapitalIndex(unittest.TestCase):
         self.assertNotEqual(capital_indexes('AbCdEf'), (0,2,4))
 
 if __name__=="__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

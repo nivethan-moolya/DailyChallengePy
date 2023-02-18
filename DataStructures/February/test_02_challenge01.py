@@ -23,10 +23,11 @@ def anagramCheck(String01, String02):
 
 import unittest
 
+
 class VerifyAnagram(unittest.TestCase):
     def testAnagramValidation(self):
         self.assertEqual(anagramCheck('abc d', 'd abc'), 'Given strings are Anagrams')
         self.assertEqual(anagramCheck('abcd', 'd abc'), 'Given strings are not an Anagrams')
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

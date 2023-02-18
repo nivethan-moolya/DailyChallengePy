@@ -17,11 +17,13 @@ def SampleInput(value):
     for uniqueKey, repeatValue in iterValue:
         lenValue = len(list(repeatValue))
         listOutput.append((lenValue, int(uniqueKey)))
+    #print(listOutput)
     return listOutput
 
 #print(SampleInput('1222311'))
 
 import unittest
+
 
 class VerifySampleTest(unittest.TestCase):
     def testSampleTest(self):
@@ -30,4 +32,4 @@ class VerifySampleTest(unittest.TestCase):
         self.assertNotEqual(SampleInput('1'), [(1, 2)])
 
 if __name__=='__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

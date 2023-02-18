@@ -15,12 +15,14 @@ Your function should return the number of people who are online.
 
 import json
 import unittest
+
 #status = '{"Nikhil" :  "online", "Akshat" :  "online", "Akash" :  "offline"}'
 def online_count(status):
 
     statuses = json.loads(status)
     v = list(statuses.values()) 
     l = [a for a in v if 'online' in a]
+    #print(len(l))
     return len(l)
 
 class VerifyOnline(unittest.TestCase):
@@ -31,4 +33,4 @@ class VerifyOnline(unittest.TestCase):
         self.assertNotEqual(online_count('{"Nikhil" :  "online", "Akshat" :  "offline", "Eve": "offline"}'), 3)
 
 if __name__=='__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

@@ -1,0 +1,6 @@
+To run unit test with html report
+    pip install pytest
+    pip install pytest-html
+    cmd: 
+        py.test -v -s
+        pytest --html=report.html

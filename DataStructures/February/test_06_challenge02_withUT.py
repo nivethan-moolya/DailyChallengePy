@@ -18,6 +18,7 @@ def next_edge(side1:int, side2:int):
 
 import unittest
 
+
 class VerifyNextThirdTriangleSide(unittest.TestCase):
 
     def testNextTriagleSide(self):
@@ -27,6 +28,6 @@ class VerifyNextThirdTriangleSide(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
 
 #next_edge(int(input(f'Prodide 1st side for the Triangle:')), int(input(f'Prodide 2nd side for the Triangle:')))

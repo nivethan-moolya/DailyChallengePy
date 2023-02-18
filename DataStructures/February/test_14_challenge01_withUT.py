@@ -5,6 +5,7 @@ The Trains Are Delayed Again, Due to unforseen circumstances in Suburbia, the tr
 From: https://edabit.com/challenge/WpRhk6tKJFmvJA6cq
 """
 import unittest
+
 from datetime import datetime
 from datetime import timedelta
 
@@ -42,4 +43,4 @@ class TrainSetBack(unittest.TestCase):
         self.assertEqual(trains[1].expected_time, "14:40")
         self.assertEqual(trains[2].expected_time, "16:02")
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
