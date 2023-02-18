@@ -31,4 +31,18 @@ def makeBalancedCluster(shuffledParentheses):
     print(f'Balanced Cluster of parentheses: {balancedParentheses}')
     return balancedParentheses
 
-makeBalancedCluster(input(f'Provide string of Parentheses to make balanced clusters:'))
+#makeBalancedCluster(input(f'Provide string of Parentheses to make balanced clusters:'))
+
+import unittest
+
+class VerifyBalancedClusters(unittest.TestCase):
+    def testBalancedCluster(self):
+        self.assertEqual(makeBalancedCluster('()()()'), ['()', '()', '()'])
+        self.assertEqual(makeBalancedCluster('((()))'), ['((()))'])
+        self.assertEqual(makeBalancedCluster('((()))(())()()(()())'), ['((()))', '(())', '()', '()', '(()())'])
+        self.assertEqual(makeBalancedCluster('((())())(()(()()))'), ['((())())', '(()(()()))'])
+        self.assertNotEqual(makeBalancedCluster('()'), [')('])
+
+
+if __name__=="__main__":
+    unittest.main()
